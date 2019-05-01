@@ -16,6 +16,7 @@ RUN apt-get update \
         libjpeg-dev \
         libpng-dev \
         libtiff-dev \
+        libavcodec-dev \
         libavformat-dev \
         libpq-dev \
     && rm -rf /var/lib/apt/lists/*
@@ -37,6 +38,7 @@ RUN wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
   -DWITH_TBB=ON \
   -DWITH_EIGEN=ON \
   -DWITH_V4L=ON \
+  -DWITH_FFMPEG=ON \
   -DBUILD_TESTS=OFF \
   -DBUILD_PERF_TESTS=OFF \
   -DCMAKE_BUILD_TYPE=RELEASE \
